@@ -1,0 +1,44 @@
+setcps (160/120)
+
+d1
+$ every 3 (rev)
+$ whenmod 5 6 (# speed "2 1 4")
+$ every 4 (# nudge (irand 3 * 6))
+$ whenmod 6 7 (degradeBy 0.5)
+$ every 4 (# room (every 5 (rev) $ range 0.1 1 (irand 1)))
+$ every 2 (# coarse (fastcat ["1 2 2 1 0.2", irand 10]))
+$ s "{house rave [house, house]}"
+# n (irand 3 * 5)
+# cut "1"
+
+d1 silence
+
+d2
+$ degradeBy 0.2
+$ every 6 (rev)
+$ whenmod 8 7 (scramble 2)
+$ every 3 (palindrome)
+$ whenmod 5 6 (# orbit 1)
+$ s "{bd [ht ht ht]?, future future:2}"
+
+d2 silence
+
+d3
+$ whenmod 4 3 (# speed (range 0.5 0.8 $ irand 10 |* "0.2"))
+$ every 4 (swingBy (1/3) 5)
+$ every 3 (rev)
+-- $ every 4 (# crush 3)
+$ s "{wobble wobble {wobble*3}}"
+# n ((irand 3) |+ 10)
+# speed "0.7 0.4 1"
+# cut "1"
+
+d3 silence
+
+d4
+$ whenmod 7 5 (trunc 0.7)
+$ whenmod 3 2 (# speed (range 0.2 0.7 (irand 5) / 2))
+$ s "{sn(3,8)?, bass2(1,4), psr(5,4)}"
+# n "4 9 4"
+
+d4 silence
