@@ -1,0 +1,14 @@
+d1
+-- $ often (0.25 <~)
+$ every 5 (brak)
+$ whenmod
+-- $ stripe 4
+-- $ stut 4 0.5 0.2
+$ every 5 (rev)
+$ chunk 4 (# speed 0.9)
+$ every 4 (# speed (range 0.8 0.9 sine))
+$ s "{less(6,12), wobble}"
+-- # n "5 13 10 1"
+# n (every 3 (const $ segment 8 (irand 16)) "4 15 10 7")
+
+d1 silence
