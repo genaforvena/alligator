@@ -1,0 +1,8 @@
+d1
+$ chunk 6 (# n "5")
+$ every 4 (chop 50)
+$ every 5 (trunc 0.2)
+$ whenmod 6 3 (chunk 7 (iter 7))
+$ s "{house(7,8)}"
+# every 6 (# n "14 13 1") (n "10 13 4")
+# speed (segment 16 $ range 0.8 1 (sine))
