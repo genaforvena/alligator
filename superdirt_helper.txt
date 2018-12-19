@@ -1,0 +1,7 @@
+SuperDirt.start()
+
+~dirt.loadSoundFiles("/Users/imozerov/algorave/extra-samples/*")
+
+s.record()
+
+s.stopRecording()

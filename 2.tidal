@@ -9,3 +9,19 @@ $ s "{industrial [sid, co, ho, ht, cp, bass1] less}"
 # orbit "1"
 
 d1 silence
+
+d2
+$ s "{house house [arp arp bottle] ~}"
+# n (every 5 (const "5 9 2") (irand 6))
+# cut "1"
+# orbit "2"
+
+d1
+$ whenmod 3 5 (# attack "0.2 0.3 0.2 0.1")
+$ every 2 (# resonance "0.3")
+$ every 3 (# lfo "4 3 2 0")
+$ every 5 (rev)
+$ midinote "30(6,8)" # (irand 6 + 2) # stack [s "super808", every 3 (0.25 <~) (s "supersquare")]
+# sustain "1 0.4 0.2 2"
+# lfo "1"
+# velocity "5 4 0.2 0.1"

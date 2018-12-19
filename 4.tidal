@@ -1,0 +1,20 @@
+d1
+$ every 3 ( rev )
+$ every 4 ( iter 16 )
+$ chunk 8 (|- speed "0.2")
+$ every 2 ( within (0.8, 1) (degradeBy 0.9))
+$ whenmod 6 4 (within (0.8, 1) (# n "7"))
+$ s "[[gab:4 snare] ~ [~ ~ gab:3] [snare snare]]"
+# room "0.8"
+
+d2
+$ striate 128
+$ whenmod 4 7 ( rev )
+-- $ whenmod 8 4 ( # speed "0.5" )
+$ every 6 ( jux (# speed "0.6") )
+$ s "bk snare [jvrave] ravebass"
+# n ( irand 40 )
+# cut "-1"
+# gain "0.8"
+
+hush
