@@ -1,0 +1,20 @@
+d1
+$ every 4 ( degradeBy 0.2 )
+$ every 6 (fast "2 1 1 2")
+$ s (
+  every 8 (# "[808bd]")
+  $ "[electro1(7,8), foo(3,8)]"
+  )
+# n (
+    every 6 (# irand 4)
+    $ every 7 (# (irand 6 + 6))
+    $ run 3 + 5
+  )
+# cut "1"
+# speed (
+    every 6 (# (range 0.7 0.9 square))
+    $ "0.9 1 0.8"
+  )
+# room "0.4"
+
+hush
